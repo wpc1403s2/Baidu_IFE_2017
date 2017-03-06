@@ -1,0 +1,44 @@
+
+body{
+    font: normal 18px/normal Arial, Helvetica, sans-serif;
+}
+.box{
+    text-align: center;
+    margin: 100px auto;
+    width: 400px;
+}
+input {
+    display: inline-block;
+    border: 1px solid #b7b7b7;
+    height: 35px;
+    border-radius: 3px;
+    color: #333;
+    padding-left:10px;
+    font-size: 16px;
+    background: #ffffff;
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.2) inset;
+}
+div .right{
+    border: 2px solid lightgreen;
+}
+div .wrong{
+    border: 2px solid red;
+}
+button{
+
+    margin-left: 20px;
+    display: inline-block;
+    cursor: pointer;
+    width: 70px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 3px;
+    color: #ffffff;
+    background: #0199d9;
+    border: 1px solid #0199d9;
+}
+#tip{
+    float: left;
+    margin: 10px 0 0 80px;
+    color: #ccc
+}
