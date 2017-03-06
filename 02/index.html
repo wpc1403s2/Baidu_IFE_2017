@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/tool.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div id="reg" class="reg_block">
+    <div class="m-opr">
+        <form action="">
+            <div class="u-input firstInput">
+                <label class="u-label">账号：</label>
+                <input type="text" name="user" class="i-inpt">
+                <span class="info info_user">请输入用户名，2~20位，由字母、数字和下划线组成！</span>
+                <span class="error error_user">输入不合法，请重新输入！</span>
+                <span class="succ succ_user">可用</span>
+            </div>
+            <div class="u-input">
+                <label class="u-label">密码：</label>
+                <input type="password" name="pass"  class="i-inpt">
+                <span class="info info_pass">6-20个字符</span>
+                <span class="error error_pass">输入不合法，请重新输入！</span>
+                <span class="succ succ_pass">可用</span>
+            </div>
+            <div class="u-input">
+                <label class="u-label">确认密码：</label>
+                <input type="password" name="notpass" class="i-inpt">
+                <span class="info info_notpass">请再一次输入密码！</span>
+                <span class="error error_notpass">密码不一致，请重新输入！</span>
+                <span class="succ succ_notpass" >密码一致</span>
+            </div>
+            <div class="u-input">
+                <label class="u-label">邮箱：</label>
+                <input type="text" name="email" class="i-inpt">
+                <span class="info info_email">请输入电子邮件！</span>
+                <span class="error error_email">邮件不合法，请重新输入！</span>
+                <span class="succ succ_email">可用</span>
+            </div>
+            <div class="u-input">
+                <label for="inpt-phone" class="u-label">手机号：</label>
+                <input type="text" name="phone" id="inpt-phone" maxlength="20" class="i-inpt">
+                <span class="info info_phone">请输入手机号！</span>
+                <span class="error error_phone">手机不合法，请重新输入！</span>
+                <span class="succ succ_phone">可用</span>
+            </div>
+        </form>
+        <button type="button" id="btn">提交</button>
+    </div>
+</div>
+</body>
+</html>
