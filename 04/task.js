@@ -43,25 +43,26 @@ var objBox={
           case "":
             switch (direction){
                 case 0:
-                  if(yPos<=-170&&yPos>=-550){
+                  if(yPos>=-550){
                     yPos-=50;
                       moveBox.style.top = yPos + 'px';
                   }
                   break;
                 case 1:
-                  if(xPos>=225&&xPos<=725){
+                  if(xPos>=275){
                       xPos -= 50;
                       moveBox.style.left = xPos + 'px';
                   }
                   break;
                 case 2:
-                  if(yPos<=-170&&yPos>=-550){
+                  if(yPos<=-120){
                       yPos+=50;
                       moveBox.style.top = yPos + 'px';
                   }
+
                   break;
                 default:
-                  if(xPos>=225&&xPos<=725){
+                  if(xPos<=675){
                       xPos += 50;
                       moveBox.style.left = xPos + 'px';
                   }
