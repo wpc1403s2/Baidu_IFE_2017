@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>听命令的小方块01</title>
+    <style>
+      body{
+        background: #efefef;
+        font: 16px "Microsoft YaHei", 微软雅黑, 宋体, helvetica, "Hiragino Sans GB";
+        outline: 0px;
+      }
+      .reg-block{
+
+        height: 570px;
+        width: 1000px;
+        padding-top: 5px;
+        padding-bottom: 55px;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 3px 3px #cbc9c9;
+        text-align: center;
+      }
+      table{
+        border-collapse: collapse;
+        margin: 20px auto;
+      }
+      td{
+        width: 47px;
+        height: 47px;
+        border: 1px solid #cccccc;
+      }
+      .move-box{
+        transition: all .8s;
+        top: -320px;
+        left: 475px;
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        background: darksalmon;
+        position: relative;
+      }
+      .move-box::before,
+      .move-box::after{
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius:8px;
+        background: #ffffff;
+        content: ' ';
+      }
+      .move-box::before{
+        left: 6px;
+        top: 7px;
+      }
+      .move-box::after{
+        right: 6px;
+        top: 7px;
+      }
+      .move-box span{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        background: #ffffff;
+      }
+      .input-box{
+        margin-top: -60px;
+      }
+      input[type='button'] {
+        background: darksalmon;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="reg-block">
+    <table id='table'></table>
+    <div class="move-box" id="move_box">
+      <span></span>
+    </div>
+    <div class="input-box">
+    <input type="text" id="command_input">
+    <input type="button" name="" id="go" value="Go">
+    <input type="button" name="" id="turn_left" value="TRA LEF">
+    <input type="button" name="" id="turn_right" value="TRA RIG">
+    <input type="button" name="" id="turn_back" value="BACK">
+    </div>
+  </div>
+    <script src="task.js"></script>
+  </body>
+</html>
