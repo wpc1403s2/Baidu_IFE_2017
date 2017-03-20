@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      
+    body{
+        width: 100%;
+        height: 100vh;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: #ebebeb;
+    }
+        .wrap{
+            position: relative;
+            max-width:750px;
+            height: 500px;
+            display: flex;
+            justify-content:center;
+            align-content:center;
+            align-items:center;
+
+        }
+        .content{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+
+
+        }
+        .wrap img{
+
+            width: 100%;
+            height: 100%;
+            -webkit-transition: -webkit-filter 1.5s;
+            transition: -webkit-filter 1.5s;
+            -o-transition: filter 1.5s;
+            -moz-transition: filter 1.5s;
+        }
+
+       .wrap:hover img{
+           -webkit-filter: blur(2px);
+           filter: blur(2px)
+        }
+        .wrap .content .txt{
+            margin: 30px auto;
+            position: relative;
+            /*width: 70%;*/
+            /*height: 70%;*/
+            width: 690px;
+            height: 440px;
+            text-align: center;
+            color: #fffffb;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -moz-box-orient: vertical;
+            -moz-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            opacity: 0;
+            -webkit-transition: opacity .5s;
+            -o-transition: opacity .5s;
+            -moz-transition: opacity .5s;
+            transition: opacity .5s;
+            box-sizing: border-box;
+        }
+       .wrap:hover .txt{
+           opacity: 1;
+       }
+        h1{
+
+            background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%, #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-background-size: 200% 100%;
+            -webkit-animation: masked-animation 4s infinite linear;
+        }
+       @-webkit-keyframes masked-animation {
+           0%  { background-position: 0 0;}
+           100% { background-position: -100% 0;}
+       }
+    .txt::before {
+        content: ' ';
+        border: 3px solid ghostwhite;
+        border-width: 3px 0;
+        height: 100%;
+        width: 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transition: all 0.5s;
+        box-sizing: border-box;
+    }
+       .txt::after{
+           content: ' ';
+           border: 3px solid ghostwhite;
+           border-width: 0px 3px;
+           height: 0;
+           width: 100%;
+           position: absolute;
+           left: 0;
+           top: 50%;
+           transition: all 0.5s;
+           box-sizing: border-box;
+       }
+       .wrap:hover .txt::before{
+           width: 100%;
+           left: 0px;
+       }
+       .wrap:hover .txt::after{
+           top: 0px;
+           height: 100%;
+       }
+
+    </style>
+</head>
+<body>
+    <figure class="wrap">
+        <figcaption class="content">
+            <div class="txt">
+                <h1>爱护环境，人人有责</h1>
+            </div>
+        </figcaption>
+        <img src="36H.jpg" alt="">
+    </figure>
+</body>
+</html>
